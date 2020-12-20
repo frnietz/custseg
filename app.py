@@ -209,11 +209,13 @@ if uploaded_file is not None:
     filtered_data=rfm[['Segment','CustomerID']]
     #segmented_customers = rfm.to_excel (r'C:\Users\uy308417\OneDrive - GSK\Desktop\SegmentedCustomer.xlsx', index = None, header=True)
     
+    st.markdown("To download generated data and use advantages of our advanced services please see [ULS Offers](https://www.ulsinsights.com/pricing)  \n"
+            "You can purchase the product or get an offer for our extended services  \n")
     
-    csv = rfm.to_csv(index=False)
-    b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
-    href = f'<a href="data:file/csv;base64,{b64}" download="segmented.csv">Download CSV File</a>(right-click and save as &lt;some_name&gt;.csv)'
-    st.markdown(href, unsafe_allow_html=True)
+    #csv = rfm.to_csv(index=False)
+    #b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
+    #href = f'<a href="data:file/csv;base64,{b64}" download="segmented.csv">Download CSV File</a>(right-click and save as &lt;some_name&gt;.csv)'
+    #st.markdown(href, unsafe_allow_html=True)
     
 else:
     st.write("upload your data in given format or contact us to handle")
